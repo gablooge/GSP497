@@ -21,7 +21,6 @@ make create
 
 ### Task 3. Validation
 ```bash
-make teardown
 make validate
 ```
 
