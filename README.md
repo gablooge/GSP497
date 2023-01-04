@@ -4,12 +4,37 @@ Cloud Operations for GKE
 
 https://www.qwiklabs.com/focuses/5157?parent=catalog
 
-# CloudShell
-> git clone https://github.com/gablooge/GSP497.git
+## Tasks
+### Task 1. Set region/zone
+```bash
+gcloud config set compute/region us-central1
+gcloud config set compute/zone us-central1-a
+```
 
-> cd GSP497
+### Task 2. Clone demo
+```bash
+gsutil cp gs://spls/gsp497/gke-monitoring-tutorial.zip .
+unzip gke-monitoring-tutorial.zip
+cd gke-monitoring-tutorial
+make create
+```
 
-> chmod +x cloudshell.sh
+### Task 3. Validation
+```bash
+make teardown
+make validate
+```
 
-> ./cloudshell.sh 
+### Task 4. Teardown
+```bash
+make teardown
+```
 
+
+## Quick Solution
+```bash
+git clone https://github.com/gablooge/GSP497.git
+cd GSP497
+chmod +x cloudshell.sh
+./cloudshell.sh 
+```
